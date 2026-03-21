@@ -1,0 +1,81 @@
+body {
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 40px;
+  background-color: #0a0a0a;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo {
+  font-size: 20px;
+  font-weight: bold;
+  color: #f91f2f;
+}
+
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: #cccccc;
+  font-size: 14px;
+  transition: color 0.2s ease;
+}
+
+.nav-link:hover {
+  color: #ffffff;
+}
+
+.login-btn {
+  background-color: #f91f2f;
+  color: white;
+  padding: 10px 18px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 600;
+  transition: all 0.2s ease;
+}
+
+.login-btn:hover {
+  background-color: #d91a27;
+}
+
+.header {
+  text-align: center;
+  padding: 120px 20px;
+}
+
+.header h1 {
+  font-size: 48px;
+  margin-bottom: 16px;
+}
+
+.header p {
+  font-size: 18px;
+  color: #aaaaaa;
+  margin-bottom: 32px;
+}
+
+.cta-btn {
+  background-color: #f91f2f;
+  color: white;
+  padding: 14px 28px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: all 0.2s ease;
+}
+
+.cta-btn:hover {
+  background-color: #d91a27;
+}
