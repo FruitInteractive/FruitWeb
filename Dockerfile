@@ -1,8 +1,8 @@
-FROM nginx:alpine
+FROM php:8.2-fpm-alpine
 
-RUN apk add --no-cache php81 php81-fpm php81-opcache php81-mysqli php81-phar php81-json
+RUN apk add --no-cache nginx
 
-RUN mkdir -p /site /run/nginx /run/php-fpm
+RUN mkdir -p /site /run/nginx /run/php-fpm /etc/nginx/conf.d
 
 COPY . /site
 
@@ -22,4 +22,4 @@ RUN echo 'server { \
 
 EXPOSE 80
 
-CMD php-fpm81 -F && nginx -g 'daemon off;'
+CMD php-fpm -D && nginx -g 'daemon off;'
