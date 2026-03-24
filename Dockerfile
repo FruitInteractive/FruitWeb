@@ -1,13 +1,13 @@
 FROM nginx:alpine
-
-WORKDIR /
-
-COPY . .
-
 RUN rm -rf /usr/share/nginx/html/*
-
-COPY nginx.conf /etc/nginx/conf.d/default.conf
-
+RUN mkdir -p /site
+COPY . /site
+RUN echo 'server { \
+    listen 80; \
+    server_name localhost; \
+    root /site; \
+    index index.html index.htm; \
+    location / { try_files $uri $uri/ =404; } \
+}' > /etc/nginx/conf.d/default.conf
 EXPOSE 80
-
 CMD ["nginx", "-g", "daemon off;"]
